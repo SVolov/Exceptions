@@ -10,7 +10,7 @@ using TaskThree.Parts;
 namespace TaskThree.Vehicles
 {
 
-    public class Vehicle : IComparable<Vehicle>
+    public class Vehicle 
     {
         public Engine Engine;
         public Chassis Chassis;
@@ -26,13 +26,6 @@ namespace TaskThree.Vehicles
         }
 
         public Vehicle() { }
-
-        public int CompareTo(Vehicle other)
-        {
-            int compare;
-            compare = String.Compare(this.Transmission.Type, other.Transmission.Type, true);
-            return compare == 0 ? -compare : compare;
-        }
 
         public virtual void PrintInfo()
         {

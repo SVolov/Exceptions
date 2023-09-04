@@ -33,7 +33,6 @@ namespace TaskFive
             {
                 CheckParametrExist(parameter, cars);
                 var xResult = cars.Where(x => x.Descendants().Elements(parameter).Where(e => e.Value.Equals(value)).Count() > 0).ToList();
-
                 var xmlSerializer = new XmlSerializer(typeof(Car));
 
                 foreach (XElement el in xResult)
